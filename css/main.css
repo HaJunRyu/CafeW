@@ -1,5 +1,5 @@
 /* section 3 */
-.section3 {
+.lectureInfo {
   background-color: #7D6F5D;
   min-width: 1440px;
   height: 460px;
@@ -7,7 +7,6 @@
 /* section 전체 묶음 */
 .sectionBundle {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
   width: 1222px;
@@ -26,6 +25,7 @@
   padding-left: 90px;
   padding-top: 60px;
   padding: 60px 0 0 90px;
+  margin: 20px;
 }
 /* 헤딩제목위 선 */
 .review:before {
@@ -121,18 +121,17 @@ color: #7D6F5D;
 }
 
 .lectureList {
-  padding-left: 0;
-  margin: 24px 35px 0;
+  padding: 0 35px 0 50px;
   color: #7D6F5D;
 }
 .lectureList li {
   position: relative;
   margin-top: 10px;
-
 }
 .lectureList li a {
   display: block;
-  margin-right: 25px;
+  width: 290px;
+  margin-right: 20px;
 }
 
 .favoriteLecture > a img {
@@ -141,7 +140,7 @@ color: #7D6F5D;
 /* section 3-2 순위 변동 이미지 */
 .lectureList li em {
   position: absolute;
-  right: 0;
+  right: -5px;
   top: 0;
   width: 28px;
   height: 0;
@@ -193,7 +192,7 @@ color: #7D6F5D;
 .brochureHeading a{
   display: inline-block;
   margin: 25px;
-  width: 122px;
+  width: 132px;
   height: 68px;
   font-size: 3.1rem;
   text-align: center;
