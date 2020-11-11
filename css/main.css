@@ -23,19 +23,17 @@
   width: 743px;
   height: 400px;
   position: relative;
+  padding-left: 90px;
+  padding-top: 60px;
+  padding: 60px 0 0 90px;
 }
 /* 헤딩제목위 선 */
-.reviewRating:before {
+.review:before {
   content: "";
   border: 1px solid #7D6F5D;
   width: 40px;
   display: block;
   margin-bottom: 30px;
-}
-
-.reviewRating {
-  padding-left: 90px;
-  margin-top: 60px;
 }
 
 .reviewHead {
@@ -46,17 +44,24 @@
 }
 
 .explanation {
-  width: 485px;
   height: 75px;
   font-size: 1.4rem;
   font-weight: 300;
   margin: 0;
   text-align: left;
   line-height: 1.8;
-  word-spacing: .1rem;
+  color: #FFFCF9;
+  position: relative;
 }
 
-
+.explanation footer {
+  position: absolute;
+  bottom: -75px;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #FFFCF9;
+}
 .reviewRating .reviewGrade {
   font-size: 2.2rem;
   color: #FFFCF9;
@@ -64,6 +69,7 @@
 }
 .reviewGrade span {
   font-size: 2.8rem;
+  color: #FFFCF9;
 }
 .reviewGrade span:nth-child(2) {
   font-weight: 700;
@@ -72,12 +78,6 @@
   margin-left: 15px;
 }
 
-.userName {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #FFFCF9;
-  margin: 20px 0 0;
-}
 /* 재생버튼 */
 .review button {
   position: absolute;
@@ -88,14 +88,13 @@
   margin: 20px 20px;
   overflow: hidden;
   border: none;
+  left: 0;
   bottom: 0;
   cursor: pointer;
 }
 
-
-
 /* section 3-2, 3-3 묶은 디비젼 */
-.courseDownload {
+.LectureBrochureContainer {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -104,12 +103,12 @@
 }
 
 /* section 3-2 인기강좌 */
-.favoriteCourse {
+.favoriteLecture {
   position: relative;
   background-color: #FFFCF9;
   height: 220px;
 }
-.courseHeading {
+.lectureHeading {
 margin: 0;
 padding: 30px 0 0 24px;
 font-size: 2.2rem;
@@ -117,30 +116,30 @@ font-weight: 700;
 color: #7D6F5D;
 }
 
-.courseHeading span {
+.lectureHeading span {
   font-size: 2.6rem;
 }
 
-.courseList {
+.lectureList {
   padding-left: 0;
   margin: 24px 35px 0;
   color: #7D6F5D;
 }
-.courseList li {
+.lectureList li {
   position: relative;
   margin-top: 10px;
 
 }
-.courseList li a {
+.lectureList li a {
   display: block;
   margin-right: 25px;
 }
 
-.favoriteCourse > a img {
+.favoriteLecture > a img {
   border: 2px solid #E27762;
 }
 /* section 3-2 순위 변동 이미지 */
-.courseList li em {
+.lectureList li em {
   position: absolute;
   right: 0;
   top: 0;
@@ -168,29 +167,30 @@ color: #7D6F5D;
 }
 
 /* section 3-2 더보기 */
-.favoriteCourse >  a {
+.favoriteLecture >  a {
   position: absolute;
   top: 34px;
   right: 25px;
 }
-.favoriteCourse > a img {
+.favoriteLecture > a img {
   width: 16px;
   height: 16px;
 }
 
 /* section 3-3 다운로드 */
-.download {
+.brochure {
   background-color: #E27762;
   position: relative;
   height: 160px;
 }
 
-.downloadHeading {
+.brochureHeading {
   display: inline-block;
   margin: 0;
+  color: #FFFCF9;
 }
 
-.downloadHeading a{
+.brochureHeading a{
   display: inline-block;
   margin: 25px;
   width: 122px;
@@ -198,13 +198,13 @@ color: #7D6F5D;
   font-size: 3.1rem;
   text-align: center;
 }
-.download img {
+.brochure img {
   position: absolute;
   right: 0;
   top: -43px;
   
 }
-.download > a {
+.brochure > a {
   background: url(../images/Up-Arrow-button.svg) no-repeat 0 0;
   transform: rotate(45deg);
   position: absolute;
