@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe W</title>
+    <title>로그인 - CAFE W</title>
+
     <meta name="description" content="Cafe W 홈페이지 입니다." />
     <meta name="keywords" content="Cafe W, 커피, 브랜드, 사이트, 홈페이지" />
     <meta name="author" content="김태윤, 류하준, 장지혜" />
@@ -14,6 +15,7 @@
 
     <!-- 스타일링 -->
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/signIn.js"></script>
 </head>
 
 <body>
@@ -83,49 +85,50 @@
             </li>
         </ul>
     </nav>
-
-    <main>
-        <section class="beverages"></section>
-        <section class="recommend-lecture"></section>
-        <section class="section3">
-            <div class="sectionBundle">
-                <h2 class="a11y-hidden">카페W 강좌 및 리뷰</h2>
-                <section class="review">
-                    <div class="reviewRating">
-                        <h3 class="reviewHead">무엇이 중요한지 알게된 시간!</h3>
-                        <p class="explanation">제가 들었던 해외 튜토리얼에 비해 시맨틱한 마크업과 접근성 비중이 크게 다뤄져 좋았습니다. 많은 튜토리얼들이 디자인을 어떻게
-                            구현하는지에만
-                            초점이 맞춰져 있잖아요. 무엇이 중요한지 알게되어 많은 도음이 되었습니다.</p>
-                        <p class="reviewGrade"><span>★ ★ ★ ★ ★</span> <span>5점</span></p>
-                        <p class="userName">우정민</p>
-                    </div>
-                    <button type="button">재생 버튼</button>
-                </section>
-                <div class="courseDownload">
-                    <section class="favoriteCourse">
-                        <h3 class="courseHeading" id="course">카페 <span>W</span> 인기 강좌</h3>
-                        <ol class="courseList">
-                            <li><a href="#">UI 구조 &amp; 디자인</a><em class="up">순위 상승</em></li>
-                            <li><a href="#">모바일 웹 UI 제작 실습</a><em class="new">새로운 소식</em></li>
-                            <li><a href="#">UI 인터렉션 주니어</a><em class="down">순위 하락</em></li>
-                            <li><a href="#">React 프로그래밍</a><em class="noChange">변동 없음</em></li>
-                        </ol>
-                        <a href="#" aria-labelledby="course" title="더보기"><img src="../images/Add.svg" alt="더보기"></a>
-                    </section>
-                    <section class="download">
-                        <h3 class="downloadHeading"><a href="#" download>브로슈어 다운받기</a></h3>
-                        <img src="../images/Cafe-Brochure.svg" alt="브로슈어 이미지">
-                        <a href="#" download>브로슈어 다운받기</a>
-                    </section>
+    <main class="main">
+        <div class="backdropContainer">
+            <section class="signIn">
+                <h2 class="signInHeading">SIGN IN</h2>
+                <p>환영합니다. 이 곳은 CAFE W 입니다.</p>
+                <form class="signInForm" action="signIn.do" method="POST">
+                    <fieldset>
+                        <legend>로그인 입력서식 영역</legend>
+                        <div class="signInFormContainer">
+                            <label for="id">아이디</label>
+                            <input type="email" id="id" name="id" placeholder="사용자 계정을 입력합니다." required>
+                            <label for="password">패스워드</label>
+                            <input type="password" id="password" name="password" placeholder="사용자 계정 비밀번호를 입력합니다." required>
+                            <div class="checkboxGroup">
+                                <span class="idSaveImage" onclick="idSave()"></span>
+                                <label for="id_save">아이디 저장</label>
+                                <input type="checkbox" id="id_save" onclick="idSave()">
+                                <span class="autoLoginImage" onclick="autoLogin()"></span>
+                                <label for="auto_login">로그인 상태 유지</label>
+                                <input type="checkbox" id="auto_login" onclick="autoLogin()">
+                            </div>
+                            <button type="submit">로그인</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="infoBox">
+                    <em><span>★</span> 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로,<span class="whiteSpace">사용자 정보 보호를 위해 정기적인 비밀번호 변경을 요청
+                    드립니다.</span></em>
+                    <em><span>★</span> Cafe W 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox,<span class="whiteSpace">Safari,
+                    Edge 브라우저에 최적화 되어있습니다.</span></em>
                 </div>
-            </div>
-        </section>
-        <section class="section4"></section>
-        <section class="section5"></section>
-        <section class="section6"></section>
-        <section class="section7"></section>
-        <section class="section8"></section>
-        <section class="section9"></section>
+                <ul class="memberMenu">
+                    <li>
+                        <a href="signUp.html">회원가입</a><span aria-hidden="true">ㅣ</span>
+                    </li>
+                    <li>
+                        <a href="#">아이디 찾기</a><span aria-hidden="true">ㅣ</span>
+                    </li>
+                    <li>
+                        <a href="#">비밀번호 찾기</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <img src="../images/Cafe-W-(Vertical).svg" alt="CAFE W 로고 이미지" title="CAFE W 로고 이미지">
