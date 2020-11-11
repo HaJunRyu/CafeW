@@ -53,7 +53,7 @@
 
 .explanation footer {
   position: absolute;
-  bottom: -75px;
+  bottom: -90px;
   left: 0;
   font-weight: bold;
   font-size: 1.3rem;
@@ -131,9 +131,6 @@ color: #7D6F5D;
   margin-right: 20px;
 }
 
-.favoriteLecture > a img {
-  border: 2px solid #E27762;
-}
 /* section 3-2 순위 변동 이미지 */
 .lectureList li em {
   position: absolute;
@@ -171,6 +168,8 @@ color: #7D6F5D;
 .favoriteLecture > a img {
   width: 16px;
   height: 16px;
+  border: 2px solid #E27762;
+  padding: 1px;
 }
 
 /* section 3-3 다운로드 */
@@ -201,13 +200,15 @@ color: #7D6F5D;
   
 }
 .brochure > a {
-  background: url(../images/Up-Arrow-button.svg) no-repeat 0 0;
+  display: inline-block;
+  background: url(../images/Up-Arrow-button.svg) no-repeat 0 0 / 120%;
   transform: rotate(45deg);
   position: absolute;
   bottom: 25px;
   left: 25px;
   width: 33px;
-  height: 0;
+  height: 22px;
   padding-top: 33px;
   overflow: hidden;
+  opacity: 0.5;
 }
