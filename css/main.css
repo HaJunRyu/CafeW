@@ -13,8 +13,8 @@
   margin: 0 auto;
 }
 /* margin 병합으로 인해 박스에 마진을 넣었음 */
-.review, .courseDownload {
-  margin: 30px auto;
+.review, .lectureBrochureContainer {
+  margin: 30px 10px;
 }
 /* section 3-1 리뷰 */
 .review {
@@ -22,10 +22,7 @@
   width: 743px;
   height: 400px;
   position: relative;
-  padding-left: 90px;
-  padding-top: 60px;
   padding: 60px 0 0 90px;
-  margin: 20px;
 }
 /* 헤딩제목위 선 */
 .review:before {
@@ -94,7 +91,7 @@
 }
 
 /* section 3-2, 3-3 묶은 디비젼 */
-.LectureBrochureContainer {
+.lectureBrochureContainer {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
