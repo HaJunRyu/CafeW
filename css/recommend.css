@@ -104,6 +104,7 @@
   flex-flow: column nowrap;
   align-items: flex-start;
   z-index: 10;
+  border-radius: 6px;
 }
 
 .detailHeading {
@@ -176,6 +177,18 @@
   margin: 11px 0;
 }
 
+.close {
+  width: 40px;
+  height: 40px;
+  padding-top: 40px;
+  overflow: hidden;
+  background: url(../images/Close.svg) 0 0 no-repeat;
+  background-position: center;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 27px;
+}
 /* 왼쪽, 오른쪽 버튼*/
 .left {
   left: 40px;
